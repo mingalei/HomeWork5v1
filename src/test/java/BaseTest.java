@@ -1,6 +1,6 @@
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.Selenide;
-import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 
 public class BaseTest {
@@ -10,7 +10,7 @@ public class BaseTest {
         Configuration.pageLoadStrategy = "eager";
     }
 
-    @AfterAll
+    @AfterEach
     static void afterAll() {
         Selenide.closeWebDriver();
     }
